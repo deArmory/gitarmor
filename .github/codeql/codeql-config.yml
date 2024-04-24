@@ -1,6 +1,6 @@
-name: 'CodeQL config'
+name: "CodeQL config"
 
-queries: 'security-extended'
+queries: "security-extended"
 paths: 
   - 'src'
 paths-ignore: 
