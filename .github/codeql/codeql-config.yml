@@ -1,6 +1,8 @@
 name: "CodeQL config"
 
-queries: "security-extended"
+disable-default-queries: true
+queries:
+    - uses: security-and-quality
 paths: 
   - 'src'
 paths-ignore: 
