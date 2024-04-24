@@ -1,5 +1,7 @@
 name: "CodeQL config"
 
 queries: "security-extended
-paths: "src"
-paths-ignore: "**/*.test.ts"
+paths: 
+  - src
+paths-ignore: 
+  - '**/*.test.ts'
