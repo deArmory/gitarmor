@@ -87,6 +87,7 @@ const run = async (): Promise<void> => {
       core.setFailed(error);
     } else {
       logger.error(error);
+      // logger in
     }
   }
 };

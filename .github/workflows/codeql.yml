@@ -17,7 +17,8 @@ on:
         - '**/*.png'
   schedule:
     - cron: '29 3 * * 6'
-
+  workflow_dispatch:
+  
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
