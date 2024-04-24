@@ -1,4 +1,4 @@
-name: "CodeQL"
+name: "CodeQL Analysis"
 
 on:
   push:
@@ -22,8 +22,8 @@ on:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
-    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    runs-on: ['ubuntu-latest']
+    timeout-minutes: 15
     permissions:
       security-events: write
       packages: read
@@ -51,4 +51,3 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
-
